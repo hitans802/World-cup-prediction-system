@@ -1,0 +1,15 @@
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# app caches / generated model artifacts (regenerate on run)
+models/*.pkl
+models/*.json
+data/processed/
+
+# os / editor
+.DS_Store
+.idea/
+.vscode/
