@@ -18,8 +18,8 @@ import pandas as pd
 import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "models"))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "features"))
-from src.models.dixon_coles import DixonColes
-import  src.models.outcome_model as om
+from dixon_coles import DixonColes
+import outcome_model as om
 
 DATA_PATH = os.path.join("data", "raw", "results.csv")
 SHOOTOUTS_PATH = os.path.join("data", "raw", "shootouts.csv")
