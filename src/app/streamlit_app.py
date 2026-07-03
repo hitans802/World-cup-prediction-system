@@ -1,17 +1,24 @@
 """
-World Cup 2026 Predictor - live bracket UI (simple hosted version).
-
-Model of use:
-  * OFFICIAL results come from data/raw/results.csv in the repo. To update them,
-    edit that file and push to GitHub (the host redeploys). Visitors can NOT
-    change official results.
-  * Any visitor can enter their own WHAT-IF results. These live only in their
-    browser session, are private to them, and reset on reload -- they never
-    affect the official bracket or other users.
-
-Run:
+streamlit_app.py — the web app (the thing users actually see and click).
+ 
+This is the front end: it draws the World Cup knockout bracket, opens a detail
+popup when you click a match (predictions + scoreline heatmap), and runs the
+tournament simulation when you hit the button. All the modelling logic lives in
+prediction_service.py — this file is just layout, styling, and interaction.
+ 
+How results work:
+  * The OFFICIAL bracket comes from data/raw/results.csv in the repo. To update
+    it (as matches finish), edit that file and push to GitHub; the hosted app
+    redeploys with the new results. Visitors cannot change official results.
+  * Any visitor can enter their own WHAT-IF results to explore alternative
+    brackets. Those edits live only in that person's browser session, are
+    private to them, and reset on reload — so lots of people can use the app at
+    once without affecting each other or the official bracket.
+ 
+Run locally:
     streamlit run src/app/streamlit_app.py
 """
+
 from __future__ import annotations
 import os
 import sys

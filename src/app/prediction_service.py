@@ -1,15 +1,28 @@
 """
-Prediction service used by the Streamlit app.
-
-Wraps the Dixon-Coles model so the UI can:
-  * fit the model once (cached)
-  * get win/draw/loss probs + expected goals for any matchup
-  * get the full scoreline probability matrix (for the heatmap)
-  * list the remaining unplayed World Cup fixtures
-  * append a finished result back into results.csv
-
-Kept separate from predict_match.py so the app has a clean import surface.
+prediction_service.py — the "brain" behind the web app.
+ 
+This module sits between the Streamlit UI (streamlit_app.py) and the underlying
+models. The app never talks to the models directly; it calls functions here.
+ 
+What it provides:
+  * Loading the data (results, shootouts, goalscorers).
+  * Fitting the models once and caching them (Dixon-Coles for scorelines,
+    LightGBM for win/draw/loss) so the app stays fast.
+  * predict()      — win/draw/loss probabilities, expected goals, most likely
+                     scoreline, and the full scoreline grid for the heatmap.
+  * build_bracket_tree() — assembles the live knockout bracket (R32 → Final),
+                     filling in later rounds as earlier results come in.
+  * simulate_knockouts() — Monte Carlo simulation of the remaining bracket,
+                     returning each team's title/final/semi probabilities.
+  * apply_session_edits() / session_shootouts() — overlay a single user's private
+                     what-if results on top of the official bracket, without
+                     touching the shared data.
+  * A few helpers for flags, shootout handling, and the empirical shootout
+    calibration (drawn knockouts are near coin-flips, per historical data).
+ 
+Keeping all of this here means the UI file stays purely about layout and clicks.
 """
+
 from __future__ import annotations
 import os
 import numpy as np
