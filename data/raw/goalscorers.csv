@@ -47820,3 +47820,73 @@ date,home_team,away_team,team,scorer,minute,own_goal,penalty
 2026-06-27,Jordan,Argentina,Argentina,Lionel Messi,80,FALSE,FALSE
 2026-06-27,Panama,England,England,Jude Bellingham,62,FALSE,FALSE
 2026-06-27,Panama,England,England,Harry Kane,67,FALSE,FALSE
+2026-06-28,South Africa,Canada,Canada,Stephen Eustáquio,90,FALSE,FALSE
+2026-06-29,Brazil,Japan,Japan,Kaishū Sano,29,FALSE,FALSE
+2026-06-29,Brazil,Japan,Brazil,Casemiro,56,FALSE,FALSE
+2026-06-29,Brazil,Japan,Brazil,Gabriel Martinelli,90,FALSE,FALSE
+2026-06-29,Germany,Paraguay,Paraguay,Julio Enciso,42,FALSE,FALSE
+2026-06-29,Germany,Paraguay,Germany,Kai Havertz,54,FALSE,FALSE
+2026-06-29,Netherlands,Morocco,Netherlands,Cody Gakpo,72,FALSE,FALSE
+2026-06-29,Netherlands,Morocco,Morocco,Issa Diop,90,FALSE,FALSE
+2026-06-30,France,Sweden,France,Kylian Mbappé,45,FALSE,FALSE
+2026-06-30,France,Sweden,France,Bradley Barcola,53,FALSE,FALSE
+2026-06-30,France,Sweden,France,Kylian Mbappé,74,FALSE,FALSE
+2026-06-30,Ivory Coast,Norway,Norway,Antonio Nusa,39,FALSE,FALSE
+2026-06-30,Ivory Coast,Norway,Ivory Coast,Amad Diallo,74,FALSE,FALSE
+2026-06-30,Ivory Coast,Norway,Norway,Erling Haaland,86,FALSE,FALSE
+2026-06-30,Mexico,Ecuador,Mexico,Julián Quiñones,22,FALSE,FALSE
+2026-06-30,Mexico,Ecuador,Mexico,Raúl Jiménez,31,FALSE,FALSE
+2026-07-01,Belgium,Senegal,Senegal,Habib Diarra,25,FALSE,FALSE
+2026-07-01,Belgium,Senegal,Senegal,Ismaïla Sarr,51,FALSE,FALSE
+2026-07-01,Belgium,Senegal,Belgium,Romelu Lukaku,86,FALSE,FALSE
+2026-07-01,Belgium,Senegal,Belgium,Youri Tielemans,89,FALSE,FALSE
+2026-07-01,Belgium,Senegal,Belgium,Youri Tielemans,120,FALSE,TRUE
+2026-07-01,England,DR Congo,DR Congo,Brian Cipenga,7,FALSE,FALSE
+2026-07-01,England,DR Congo,England,Harry Kane,75,FALSE,FALSE
+2026-07-01,England,DR Congo,England,Harry Kane,86,FALSE,FALSE
+2026-07-01,United States,Bosnia and Herzegovina,United States,Folarin Balogun,45,FALSE,FALSE
+2026-07-01,United States,Bosnia and Herzegovina,United States,Malik Tillman,82,FALSE,FALSE
+2026-07-02,Portugal,Croatia,Croatia,Ivan Perišić,53,FALSE,FALSE
+2026-07-02,Portugal,Croatia,Portugal,Cristiano Ronaldo,68,FALSE,TRUE
+2026-07-02,Portugal,Croatia,Portugal,Gonçalo Ramos,90,FALSE,FALSE
+2026-07-02,Spain,Austria,Spain,Mikel Oyarzabal,36,FALSE,FALSE
+2026-07-02,Spain,Austria,Spain,Pedro Porro,66,FALSE,FALSE
+2026-07-02,Spain,Austria,Spain,Mikel Oyarzabal,89,FALSE,FALSE
+2026-07-02,Switzerland,Algeria,Switzerland,Breel Embolo,10,FALSE,FALSE
+2026-07-02,Switzerland,Algeria,Switzerland,Dan Ndoye,46,FALSE,FALSE
+2026-07-03,Argentina,Cape Verde,Argentina,Lionel Messi,29,FALSE,FALSE
+2026-07-03,Argentina,Cape Verde,Cape Verde,Deroy Duarte,59,FALSE,FALSE
+2026-07-03,Argentina,Cape Verde,Argentina,Lisandro Martínez,92,FALSE,FALSE
+2026-07-03,Argentina,Cape Verde,Cape Verde,Sidny Lopes Cabral,103,FALSE,FALSE
+2026-07-03,Argentina,Cape Verde,Argentina,Diney,111,TRUE,FALSE
+2026-07-03,Australia,Egypt,Egypt,Emam Ashour,13,FALSE,FALSE
+2026-07-03,Australia,Egypt,Australia,Mohamed Hany,55,TRUE,FALSE
+2026-07-03,Colombia,Ghana,Colombia,Jhon Arias,14,FALSE,FALSE
+2026-07-04,Canada,Morocco,Morocco,Azzedine Ounahi,50,FALSE,FALSE
+2026-07-04,Canada,Morocco,Morocco,Azzedine Ounahi,82,FALSE,FALSE
+2026-07-04,Canada,Morocco,Morocco,Soufiane Rahimi,90,FALSE,FALSE
+2026-07-04,Paraguay,France,France,Kylian Mbappé,70,FALSE,TRUE
+2026-07-05,Brazil,Norway,Norway,Erling Haaland,79,FALSE,FALSE
+2026-07-05,Brazil,Norway,Brazil,Neymar,90,FALSE,TRUE
+2026-07-05,Brazil,Norway,Norway,Erling Haaland,90,FALSE,FALSE
+2026-07-05,Mexico,England,England,Jude Bellingham,36,FALSE,FALSE
+2026-07-05,Mexico,England,England,Jude Bellingham,38,FALSE,FALSE
+2026-07-05,Mexico,England,Mexico,Julián Quiñones,42,FALSE,FALSE
+2026-07-05,Mexico,England,England,Harry Kane,60,FALSE,TRUE
+2026-07-05,Mexico,England,Mexico,Raúl Jiménez,69,FALSE,TRUE
+2026-07-06,Portugal,Spain,Spain,Mikel Merino,90,FALSE,FALSE
+2026-07-06,United States,Belgium,Belgium,Charles De Ketelaere,9,FALSE,FALSE
+2026-07-06,United States,Belgium,United States,Malik Tillman,31,FALSE,FALSE
+2026-07-06,United States,Belgium,Belgium,Charles De Ketelaere,33,FALSE,FALSE
+2026-07-06,United States,Belgium,Belgium,Hans Vanaken,57,FALSE,FALSE
+2026-07-06,United States,Belgium,Belgium,Romelu Lukaku,90,FALSE,FALSE
+2026-07-07,Argentina,Egypt,Egypt,Yasser Ibrahim,15,FALSE,FALSE
+2026-07-07,Argentina,Egypt,Egypt,Mostafa Ziko,67,FALSE,FALSE
+2026-07-07,Argentina,Egypt,Argentina,Cristian Romero,79,FALSE,FALSE
+2026-07-07,Argentina,Egypt,Argentina,Lionel Messi,83,FALSE,FALSE
+2026-07-07,Argentina,Egypt,Argentina,Enzo Fernández,90,FALSE,FALSE
+2026-07-09,France,Morocco,France,Kylian Mbappé,60,FALSE,FALSE
+2026-07-09,France,Morocco,France,Ousmane Dembélé,66,FALSE,FALSE
+2026-07-10,Spain,Belgium,Spain,Fabián Ruiz,30,FALSE,FALSE
+2026-07-10,Spain,Belgium,Belgium,Charles De Ketelaere,41,FALSE,FALSE
+2026-07-10,Spain,Belgium,Spain,Mikel Merino,88,FALSE,FALSE
