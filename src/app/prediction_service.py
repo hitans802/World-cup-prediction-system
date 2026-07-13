@@ -252,8 +252,13 @@ def knockout_bracket(df: pd.DataFrame, shootouts: pd.DataFrame | None = None):
     through -- without altering the 1-1 scoreline the rating model sees."""
     if shootouts is None:
         shootouts = load_shootouts()
+    # Only the Round of 32 ties (28 Jun - 3 Jul). Later rounds are derived by
+    # build_bracket_tree from these winners, so we must NOT include R16+ fixtures
+    # here even if they exist in the data (that would give >16 ties and break
+    # the bracket pairing).
     ko = df[(df["tournament"] == "FIFA World Cup") &
-            (df["date"] >= pd.Timestamp("2026-06-28"))].sort_values("date")
+            (df["date"] >= pd.Timestamp("2026-06-28")) &
+            (df["date"] <= pd.Timestamp("2026-07-03"))].sort_values("date")
     ties = []
     for r in ko.itertuples(index=False):
         played = pd.notna(r.home_score)
@@ -446,7 +451,7 @@ def build_bracket_tree(df, shootouts=None):
     size = 16
     while len(prev) > 1:
         cur = []
-        for j in range(0, len(prev), 2):
+        for j in range(0, len(prev) - 1, 2):     # -1 guards against odd counts
             m1, m2 = prev[j], prev[j + 1]
             w1 = _winner_of(m1)
             w2 = _winner_of(m2)
