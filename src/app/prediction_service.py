@@ -1,9 +1,9 @@
 """
 prediction_service.py — the "brain" behind the web app.
- 
+
 This module sits between the Streamlit UI (streamlit_app.py) and the underlying
 models. The app never talks to the models directly; it calls functions here.
- 
+
 What it provides:
   * Loading the data (results, shootouts, goalscorers).
   * Fitting the models once and caching them (Dixon-Coles for scorelines,
@@ -19,10 +19,9 @@ What it provides:
                      touching the shared data.
   * A few helpers for flags, shootout handling, and the empirical shootout
     calibration (drawn knockouts are near coin-flips, per historical data).
- 
+
 Keeping all of this here means the UI file stays purely about layout and clicks.
 """
-
 from __future__ import annotations
 import os
 import numpy as np
@@ -281,6 +280,14 @@ def simulate_knockouts(model, da, dd, ties, n_sims: int = 5000, seed: int = 42):
     the first time it's needed, so repeated sims are cheap lookups not grid
     rebuilds."""
     rng = np.random.default_rng(seed)
+
+    # apply the real 2026 bracket seeding order so simulated R16 pairings match
+    # the official bracket (see build_bracket_tree). Only when we have the full
+    # 16-tie R32; otherwise use as-is.
+    BRACKET_ORDER = [3, 0, 2, 5, 1, 4, 6, 7, 9, 8, 11, 10, 14, 13, 12, 15]
+    if len(ties) == 16:
+        ties = [ties[i] for i in BRACKET_ORDER]
+
     teams = set()
     for t in ties:
         teams.add(t["home"]); teams.add(t["away"])
@@ -414,6 +421,15 @@ def build_bracket_tree(df, shootouts=None):
     if shootouts is None:
         shootouts = load_shootouts()
     r32 = knockout_bracket(df, shootouts=shootouts)   # existing R32 list
+
+    # Real 2026 World Cup bracket order. The official bracket does NOT pair R32
+    # winners consecutively (0v1, 2v3...); it uses a fixed seeding path. These
+    # index pairs are the actual R16 matchups (verified against FIFA results):
+    #   Morocco/Canada, Paraguay/France, Brazil/Norway, Mexico/England,
+    #   USA/Belgium, Portugal/Spain, Argentina/Egypt, Switzerland/Colombia.
+    BRACKET_ORDER = [3, 0, 2, 5, 1, 4, 6, 7, 9, 8, 11, 10, 14, 13, 12, 15]
+    if len(r32) == 16:
+        r32 = [r32[i] for i in BRACKET_ORDER]
 
     rounds = [[]]
     for i, t in enumerate(r32):
