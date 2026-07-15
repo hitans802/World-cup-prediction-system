@@ -289,7 +289,7 @@ def simulate_knockouts(model, da, dd, ties, n_sims: int = 5000, seed: int = 42):
     # apply the real 2026 bracket seeding order so simulated R16 pairings match
     # the official bracket (see build_bracket_tree). Only when we have the full
     # 16-tie R32; otherwise use as-is.
-    BRACKET_ORDER = [3, 0, 2, 5, 1, 4, 6, 7, 9, 8, 11, 10, 14, 13, 12, 15]
+    BRACKET_ORDER = [0, 3, 2, 5, 11, 10, 9, 8, 1, 4, 6, 7, 14, 13, 12, 15]
     if len(ties) == 16:
         ties = [ties[i] for i in BRACKET_ORDER]
 
@@ -432,7 +432,7 @@ def build_bracket_tree(df, shootouts=None):
     # index pairs are the actual R16 matchups (verified against FIFA results):
     #   Morocco/Canada, Paraguay/France, Brazil/Norway, Mexico/England,
     #   USA/Belgium, Portugal/Spain, Argentina/Egypt, Switzerland/Colombia.
-    BRACKET_ORDER = [3, 0, 2, 5, 1, 4, 6, 7, 9, 8, 11, 10, 14, 13, 12, 15]
+    BRACKET_ORDER = [0, 3, 2, 5, 11, 10, 9, 8, 1, 4, 6, 7, 14, 13, 12, 15]
     if len(r32) == 16:
         r32 = [r32[i] for i in BRACKET_ORDER]
 
